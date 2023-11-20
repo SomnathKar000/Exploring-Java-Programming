@@ -1,4 +1,4 @@
-public class Conditional_statements {
+class Conditional_statements {
     public static void main(String args[])
     {
         int val1=4,val2=5,val3=7;
@@ -21,3 +21,4 @@ public class Conditional_statements {
         System.out.println(result);
     }
 }
+
