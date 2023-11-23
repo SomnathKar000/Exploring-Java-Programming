@@ -1,4 +1,4 @@
-public class Demo {
+ class Demo {
     public static void main(String[] args) {
         Claculator c=new Claculator();
         System.out.println(c.add(10,20));

@@ -19,6 +19,7 @@ public class Array {
         double random=Math.random();
         // Math.random returns random double value between 0 and 1
         //you can not stort it in int
+        System.out.println(random);
 
         int MultiDiArr[][]=new int[3][4];
 
