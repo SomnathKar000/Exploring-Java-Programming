@@ -12,6 +12,9 @@ class StaticVariable {
 
         m1.view();
         m2.view();
+        Mobile.staticView();
+        Mobile.staticViewRefference(m1);
+        Mobile.staticViewRefference(m2);
     }
 }
 class Mobile{
@@ -20,6 +23,12 @@ class Mobile{
     static String OS="Android";
 
     public void view(){
-        System.out.println("Name: "+name+" , Price: "+Price+" , OS: "+OS);
+        System.out.println("Name: "+name+" , Price: "+Price );
+    }
+    public static void staticView(){
+        System.out.println("The static value is: "+OS);
+    }
+    public static void staticViewRefference(Mobile obj){
+        System.out.println("The refference of the Mobile is: "+"Name: "+obj.name+" , Price: "+obj.Price );
     }
 }
