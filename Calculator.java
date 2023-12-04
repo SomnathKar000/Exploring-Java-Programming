@@ -1,14 +1,4 @@
- class Demo {
-    public static void main(String args[]){
-        int num1=10;
-        int num2=15;
-        Calculator cal =new Calculator();
-        double result=cal.div(num1, num2);
-        System.out.println(result);
-    }
-}
-
-class Calculator{
+public class Calculator{
     public int add(int num1,int num2){
         return num1+num2;
     }
@@ -22,3 +12,14 @@ class Calculator{
         return num1/num2;
     }
 }
+
+class Demo {
+    public static void main(String args[]){
+        int num1=10;
+        int num2=15;
+        Calculator cal =new Calculator();
+        double result=cal.div(num1, num2);
+        System.out.println(result);
+    }
+}
+
