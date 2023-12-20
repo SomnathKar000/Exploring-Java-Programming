@@ -1,4 +1,3 @@
-
 public class UpcastingandDowncasting {
     public static void main(String[] args) {
         // A obj = new B();
