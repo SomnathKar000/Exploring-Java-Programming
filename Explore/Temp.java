@@ -1,28 +1,32 @@
 public class Temp {
     public static void main(String [] args){
-        int multiArr[][]=new int[3][];
-       for(int i=0;i<multiArr.length;i++){
-        int randomNum=(int)(Math.random()*10);
-        multiArr[i]= new int[randomNum];
-       }
+        Student s1=new Student();
+        s1.id=1;
+        s1.name="John";
+        s1.age=20;
 
-        // for(int i=0;i<multiArr.length;i++){
-        //     for(int j=0;j<multiArr[i].length;j++){
-        //         multiArr[i][j]=(int)(Math.random()*9+1);
-        //     }
-        // }
-        for(int arr[]:multiArr){
-            for(int i=0;i<arr.length;i++){
-                arr[i]=(int)(Math.random()*9+1);
-            }
+        Student s2= new Student(2,"Doe",21);
+        Student s3= new Student(3,"Jane",22);
+
+        Student students[]=new Student[3];
+        students[0]=s1;
+        students[1]=s2;
+        students[2]=s3;
+
+        for(Student obj :students){
+            System.out.println(obj.id+ " "+obj.name+" "+obj.age);
         }
+    }
+}
 
-        for(int i=0;i<multiArr.length;i++){
-            for(int j=0;j<multiArr[i].length;j++){
-                System.out.print(multiArr[i][j]+" ");
-            }
-            System.out.println();
-        }
-
+class Student{
+    int id;
+    String name;
+    int age;
+    Student(){}
+    Student(int id,String name,int age){
+        this.id=id;
+        this.name=name;
+        this.age=age;
     }
 }
