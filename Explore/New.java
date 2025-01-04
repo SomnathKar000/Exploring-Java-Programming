@@ -13,7 +13,7 @@ public class New {
         //     System.out.println("The current no is :- "+a);
         //     a--;
         // }while(a>0);
-        // Calculator obj= new Calculator();
+        Calculator obj= new Calculator();
         int sum=Calculator.sum(10,20);
         System.out.println(sum);
 
@@ -23,5 +23,8 @@ public class New {
 class Calculator{
      static int sum(int num1,int num2){
         return num1+num2;
+    }
+    public int sum(int a,int b,int c){
+        return a+b+c;
     }
 }
