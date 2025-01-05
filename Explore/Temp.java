@@ -8,7 +8,6 @@ public class Temp {
         obj2.price=2000;
         obj2.brand="Nokia";
 
-        Mobile.name="Smartphone";
         obj1.show();
         obj2.show();
         Mobile.view();
@@ -20,6 +19,15 @@ class Mobile{
    static String name;
     int price;
     String brand;
+    static{
+        System.out.println("Static block"); // Called only once
+        name="Mobile";
+    }
+    public Mobile(){
+        System.out.println("Constructor"); // Called every time object is created
+        price=0;
+        brand="NA";
+    }
 
     public void show(){
         System.out.println(name+" : "+brand+" : "+ price );
