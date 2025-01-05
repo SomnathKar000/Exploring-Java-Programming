@@ -11,6 +11,8 @@ public class Temp {
         Mobile.name="Smartphone";
         obj1.show();
         obj2.show();
+        Mobile.view();
+        Mobile.show(obj2);
     }
 }
 
@@ -20,6 +22,12 @@ class Mobile{
     String brand;
 
     public void show(){
-        System.out.println(this.name+" : "+this.brand+" : "+ this.price );
+        System.out.println(name+" : "+brand+" : "+ price );
+    }
+    public static void view(){
+        System.out.println("Viewing");
+    }
+    public static void show(Mobile obj){
+        System.out.println(name+" : "+obj.brand+" : "+ obj.price );
     }
 }
