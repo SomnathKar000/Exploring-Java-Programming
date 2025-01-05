@@ -1,32 +1,25 @@
 public class Temp {
     public static void main(String [] args){
-        Student s1=new Student();
-        s1.id=1;
-        s1.name="John";
-        s1.age=20;
+        Mobile obj1= new Mobile();
+        obj1.price=10000;
+        obj1.brand="Samsung";
 
-        Student s2= new Student(2,"Doe",21);
-        Student s3= new Student(3,"Jane",22);
+        Mobile obj2 = new Mobile();
+        obj2.price=2000;
+        obj2.brand="Nokia";
 
-        Student students[]=new Student[3];
-        students[0]=s1;
-        students[1]=s2;
-        students[2]=s3;
-
-        for(Student obj :students){
-            System.out.println(obj.id+ " "+obj.name+" "+obj.age);
-        }
+        Mobile.name="Smartphone";
+        obj1.show();
+        obj2.show();
     }
 }
 
-class Student{
-    int id;
-    String name;
-    int age;
-    Student(){}
-    Student(int id,String name,int age){
-        this.id=id;
-        this.name=name;
-        this.age=age;
+class Mobile{
+   static String name;
+    int price;
+    String brand;
+
+    public void show(){
+        System.out.println(this.name+" : "+this.brand+" : "+ this.price );
     }
 }
