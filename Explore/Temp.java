@@ -1,18 +1,7 @@
 public class Temp {
     public static void main(String [] args){
-        Car obj = new Car();
-        obj.setColor("Red");
-        obj.print();
+        Calc cal=new AdvCalc();
+        System.out.println(cal.sub(4, 1));
     }
 }
 
-class Car{
-    private String color;
-
-    public void print(){
-        System.out.println("Car color is: " + color);
-    }
-    public void setColor(String color){
-        this.color = color;
-    }
-}
