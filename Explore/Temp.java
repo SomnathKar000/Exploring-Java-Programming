@@ -1,24 +1,32 @@
 public class Temp {
     public static void main(String [] args){
-        B obj = new B(7);
+        A obj= new A();
+        obj.show(9);
     }
 }
 
-class A{
-    public A(){
-        System.out.println("In A");
+class A extends B{
+    public void show(){
+        System.out.println("In A show");
     }
-    public A(int i){
-        System.out.println("In A int");
+    public void hide(){
+        System.out.println("In A hide");
     }
 }
-class B extends A{
-    public B(){
-        System.out.println("In B");
+ class  B extends C {
+    public void show(){
+        System.out.println("In B show");
     }
 
-    public B(int i){
-        this();
-        System.out.println("In B int");
+    public void display(){
+        System.out.println("In B display");
+    }
+}
+class C{
+    public void show(int a){
+        System.out.println("In C show");
+    }
+    public void display(){
+        System.out.println("In C display");
     }
 }
