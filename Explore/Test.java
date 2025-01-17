@@ -1,20 +1,19 @@
 public class Test {
     public static void main(String args[]){
-       A obj = new B();
-       obj.show();
-       obj=new B();
-       obj.show();
     }
 }
 
-class A{
-    public void show(){
-        System.out.println("A Show");
+class Calc{
+    final public void show(){
+        System.out.println("My name is Calc");
+    }
+    public void add(int a, int b){
+        System.out.println(a+b);
     }
 }
 
-class B extends A{
-    public void show(){
-        System.out.println("B Show");
-    }
+final class AdvanceCalc extends Calc {
+    
+    
+    
 }
