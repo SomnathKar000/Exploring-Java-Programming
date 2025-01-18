@@ -1,23 +1,26 @@
 public class Test {
     public static void main(String args[]) {
-        Mac obj = new Mac();
-        obj.code();
-        obj.playMusic();
+        A obj = new A();
+        obj.print();
+        A.B obj2 = obj.getB();
+        obj2.print();
     }
 }
 
-class Mac extends Computer {
+class A {
+    int num = 12;
 
-    public void code() {
-        System.out.println("Run code");
+    public void print() {
+        System.out.println("Print A");
     }
 
-}
+    class B {
+        public void print() {
+            System.out.println("Print B");
+        }
+    }
 
-abstract class Computer {
-    public abstract void code();
-
-    public void playMusic() {
-        System.out.println("Play music");
+    public B getB() {
+        return new B();
     }
 }
