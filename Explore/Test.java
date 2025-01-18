@@ -1,11 +1,23 @@
 public class Test {
     public static void main(String args[]) {
-        int num = 4;
-        Integer num1 = num; // auto boxing
+        Mac obj = new Mac();
+        obj.code();
+        obj.playMusic();
+    }
+}
 
-        int num2 = num1; // auto unboxing
+class Mac extends Computer {
 
-        System.out.println(num2);
+    public void code() {
+        System.out.println("Run code");
+    }
 
+}
+
+abstract class Computer {
+    public abstract void code();
+
+    public void playMusic() {
+        System.out.println("Play music");
     }
 }
