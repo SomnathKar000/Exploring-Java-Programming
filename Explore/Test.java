@@ -2,11 +2,11 @@ public class Test {
     public static void main(String args[]) {
         A obj = new A();
         obj.print();
-        A.B obj2 = obj.getB();
+        A.B obj2 = obj.new B();
         obj2.print();
-        A.B.C obj3 = obj2.getC();
+        A.B.C obj3 = obj.new B().new C();
         obj3.print();
-        obj.printC();
+
     }
 }
 
@@ -15,10 +15,6 @@ class A {
 
     public void print() {
         System.out.println("Print A");
-    }
-
-    public B getB() {
-        return new B();
     }
 
     class B {
@@ -32,13 +28,6 @@ class A {
             }
         }
 
-        public C getC() {
-            return new C();
-        }
-    }
-
-    public void printC() {
-        new B().getC().print();
     }
 
 }
