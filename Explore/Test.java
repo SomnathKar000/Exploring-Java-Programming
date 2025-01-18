@@ -1,25 +1,11 @@
 public class Test {
-    public static void main(String args[]){
-        A obj= new B();
+    public static void main(String args[]) {
+        int num = 4;
+        Integer num1 = num; // auto boxing
 
-        B obj2= (B)obj;
-        obj2.show();
-        obj2.display(); 
+        int num2 = num1.intValue(); // unboxing
 
-    }
-}
-class A{
-    public void show(){
-        System.out.println("A show");
-    }
-    
-}
-class B extends A{
-    public void show(){
-        System.out.println("B show");
-    }
+        System.out.println(num2);
 
-    public void display(){
-        System.out.println("B display");
     }
 }
