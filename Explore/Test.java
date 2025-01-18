@@ -4,7 +4,7 @@ public class Test {
         obj.print();
         A.B obj2 = obj.new B();
         obj2.print();
-        A.B.C obj3 = obj.new B().new C();
+        A.B.C obj3 = new A.B.C();
         obj3.print();
 
     }
@@ -22,7 +22,7 @@ class A {
             System.out.println("Print B");
         }
 
-        class C {
+        static class C {
             public void print() {
                 System.out.println("Print C");
             }
