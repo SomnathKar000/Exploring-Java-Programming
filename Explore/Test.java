@@ -3,7 +3,7 @@ public class Test {
         int num = 4;
         Integer num1 = num; // auto boxing
 
-        int num2 = num1.intValue(); // unboxing
+        int num2 = num1; // auto unboxing
 
         System.out.println(num2);
 
