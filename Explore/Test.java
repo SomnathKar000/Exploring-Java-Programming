@@ -4,6 +4,9 @@ public class Test {
         obj.print();
         A.B obj2 = obj.getB();
         obj2.print();
+        A.B.C obj3 = obj2.getC();
+        obj3.print();
+        obj.printC();
     }
 }
 
@@ -14,13 +17,28 @@ class A {
         System.out.println("Print A");
     }
 
+    public B getB() {
+        return new B();
+    }
+
     class B {
         public void print() {
             System.out.println("Print B");
         }
+
+        class C {
+            public void print() {
+                System.out.println("Print C");
+            }
+        }
+
+        public C getC() {
+            return new C();
+        }
     }
 
-    public B getB() {
-        return new B();
+    public void printC() {
+        new B().getC().print();
     }
+
 }
