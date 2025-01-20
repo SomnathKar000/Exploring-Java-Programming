@@ -10,11 +10,11 @@ interface A {
     void show();
 }
 
-interface B {
+interface B extends A {
     void print();
 }
 
-class C implements A, B {
+class C implements B {
     public void show() {
         System.out.println("This is show");
     }
