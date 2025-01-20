@@ -4,6 +4,7 @@ public class Test {
         obj.Print();
         obj.Show();
         obj.Extra();
+        System.out.println(Printer.age);
     }
 }
 
@@ -17,6 +18,8 @@ interface A {
 }
 
 class Printer implements A {
+    public static String age = "Test";
+
     public void Show() {
         System.out.println("This is show");
     }
