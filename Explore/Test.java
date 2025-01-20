@@ -1,12 +1,16 @@
 public class Test {
     public static void main(String args[]) {
-        A obj = new Printer();
+        Printer obj = new Printer();
         obj.Print();
         obj.Show();
+        obj.Extra();
     }
 }
 
 interface A {
+    int age = 2; // Final and static
+    String type = "Interface"; // Final and static
+
     void Show();
 
     void Print();
@@ -19,5 +23,9 @@ class Printer implements A {
 
     public void Print() {
         System.out.println("This is Print");
+    }
+
+    public void Extra() {
+        System.out.println("This is Extra");
     }
 }
