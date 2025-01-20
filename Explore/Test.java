@@ -1,23 +1,15 @@
 public class Test {
     public static void main(String args[]) {
-        A obj = new B() {
+        A obj = new A() {
             public void show() {
-                System.out.println("In New Show");
+                System.out.println("In new Show");
             }
         };
+
         obj.show();
-
     }
 }
 
-class A {
-    public void show() {
-        System.out.println("In A Show");
-    }
-}
-
-class B extends A {
-    public void show() {
-        System.out.println("In B Show");
-    }
+abstract class A {
+    public abstract void show();
 }
