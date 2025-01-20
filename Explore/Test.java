@@ -1,34 +1,25 @@
 public class Test {
     public static void main(String args[]) {
-        Printer obj = new Printer();
-        obj.Print();
-        obj.Show();
-        obj.Extra();
-        System.out.println(Printer.age);
+        C obj = new C();
+        obj.print();
+        obj.show();
     }
 }
 
 interface A {
-    int age = 2; // Final and static
-    String type = "Interface"; // Final and static
-
-    void Show();
-
-    void Print();
+    void show();
 }
 
-class Printer implements A {
-    public static String age = "Test";
+interface B {
+    void print();
+}
 
-    public void Show() {
+class C implements A, B {
+    public void show() {
         System.out.println("This is show");
     }
 
-    public void Print() {
+    public void print() {
         System.out.println("This is Print");
-    }
-
-    public void Extra() {
-        System.out.println("This is Extra");
     }
 }
