@@ -1,15 +1,23 @@
 public class Test {
     public static void main(String args[]) {
-        A obj = new A() {
-            public void show() {
-                System.out.println("In new Show");
-            }
-        };
-
-        obj.show();
+        A obj = new Printer();
+        obj.Print();
+        obj.Show();
     }
 }
 
-abstract class A {
-    public abstract void show();
+interface A {
+    void Show();
+
+    void Print();
+}
+
+class Printer implements A {
+    public void Show() {
+        System.out.println("This is show");
+    }
+
+    public void Print() {
+        System.out.println("This is Print");
+    }
 }
