@@ -1,14 +1,11 @@
 public class Test {
     public static void main(String args[]) {
-        A obj = () -> {
-            System.out.println("This is show");
-        };
-
-        obj.show();
+        int i = 0;
+        int j = 0;
+        try {
+            i = 18 / j;
+        } catch (Exception err) {
+            System.out.println("Error occurred " + err.getLocalizedMessage());
+        }
     }
-}
-
-@FunctionalInterface
-interface A {
-    void show();
 }
