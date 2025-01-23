@@ -1,14 +1,12 @@
 public class Test {
     public static void main(String args[]) {
-        int i = 0;
-        int j = 0;
         try {
-            i = 18 / 2;
-            throw new MyException("This one is created by me");
-        } catch (MyException err) {
-            System.out.println(err.toString());
-        } catch (Exception err) {
-            System.out.println("Error occurred " + err.getLocalizedMessage());
+            Demo obj = new Demo();
+            obj.showClass("jhsdgfhgd");
+            System.out.println("Found the class");
+
+        } catch (Exception e) {
+            System.out.println("Something went wrong " + e.toString());
         }
     }
 }
@@ -16,5 +14,11 @@ public class Test {
 class MyException extends Exception {
     public MyException(String str) {
         super(str);
+    }
+}
+
+class Demo {
+    public void showClass(String name) throws Exception {
+        Class.forName(name);
     }
 }
