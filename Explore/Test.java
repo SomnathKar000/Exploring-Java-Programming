@@ -1,24 +1,19 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Test {
-    public static void main(String args[]) {
-        try {
-            Demo obj = new Demo();
-            obj.showClass("jhsdgfhgd");
-            System.out.println("Found the class");
+    public static void main(String args[]) throws IOException {
+        System.out.print("Enter a Number ");
+        // int num = System.in.read();
 
-        } catch (Exception e) {
-            System.out.println("Something went wrong " + e.toString());
-        }
-    }
-}
+        InputStreamReader in = new InputStreamReader(System.in);
 
-class MyException extends Exception {
-    public MyException(String str) {
-        super(str);
-    }
-}
+        BufferedReader bf = new BufferedReader(in);
 
-class Demo {
-    public void showClass(String name) throws Exception {
-        Class.forName(name);
+        int num = Integer.parseInt(bf.readLine());
+
+        System.out.println("The number is " + num);
+
     }
 }
