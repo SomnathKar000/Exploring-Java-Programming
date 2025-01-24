@@ -5,14 +5,15 @@ import java.util.Scanner;
 
 public class Test {
     public static void main(String args[]) throws IOException {
-        System.out.print("Enter a Number ");
-        // int num = System.in.read();
-
-        Scanner sc = new Scanner(System.in);
-        int num = sc.nextInt();
-        System.out.println("The number is " + num);
-
-        sc.close();
-
+        BufferedReader bf = null;
+        try {
+            System.out.print("Enter a number ");
+            InputStreamReader in = new InputStreamReader(System.in);
+            bf = new BufferedReader(in);
+            int num = Integer.parseInt(bf.readLine());
+            System.out.println(num);
+        } finally {
+            bf.close();
+        }
     }
 }
