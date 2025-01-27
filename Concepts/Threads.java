@@ -2,22 +2,22 @@ package Concepts;
 
 public class Threads {
     public static void main(String args[]) {
-        A obj1 = new A();
-        B obj2 = new B();
+        Runnable obj1 = new A();
+        Runnable obj2 = new B();
 
-        obj2.setPriority(Thread.MAX_PRIORITY);
+        Thread t1 = new Thread(obj1);
+        Thread t2 = new Thread(obj2);
 
-        obj1.start();
-        obj2.start();
+        t1.start();
+        t2.start();
 
     }
 }
 
-class A extends Thread {
+class A implements Runnable {
     public void run() {
         try {
             show();
-            System.out.println(getName());
         } catch (Exception e) {
             System.out.println(e.toString());
         }
@@ -31,11 +31,10 @@ class A extends Thread {
     }
 }
 
-class B extends Thread {
+class B implements Runnable {
     public void run() {
         try {
             show();
-            System.out.println(getName());
         } catch (Exception e) {
             System.out.println(e.toString());
         }
