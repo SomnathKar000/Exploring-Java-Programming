@@ -7,10 +7,10 @@ import java.util.Set;
 
 public class CollectionClasses {
     public static void main(String args[]) {
-        HashMap<Integer> set = new HashSet<Integer>();
-        set.add(34);
-        set.add(78);
-        set.add(34);
-        System.out.println(set.contains(3));
+        HashMap<Integer, String> map = new HashMap<Integer, String>();
+        map.put(2, "sds");
+        map.put(9, "haha");
+        System.out.println(map.get(9));
+        System.out.println(map);
     }
 }
