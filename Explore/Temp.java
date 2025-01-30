@@ -5,10 +5,11 @@ import java.util.List;
 
 public class Temp {
     public static void main(String[] args) {
-        List<String> nums = new ArrayList<>();
-        Comparator<String> com = new Comparator<String>() {
-            public int compare(String a, String b) {
-                if (a.length() > b.length()) {
+        List<Student> students = new ArrayList<>();
+
+        Comparator<Student> com = new Comparator<Student>() {
+            public int compare(Student s1, Student s2) {
+                if (s1.age > s2.age) {
                     return 1;
                 } else {
                     return -1;
@@ -16,11 +17,30 @@ public class Temp {
             }
         };
 
-        nums.add("a");
-        nums.add("absd");
-        nums.add("as");
-        nums.add("skjhd");
-        Collections.sort(nums, com);
-        System.out.println(nums);
+        students.add(new Student(12, "Test"));
+        students.add(new Student(22, "Demo"));
+        students.add(new Student(14, "Okay"));
+        students.add(new Student(26, "Done"));
+        students.add(new Student(18, "Temp"));
+
+        Collections.sort(students, com);
+
+        for (Student s : students) {
+            System.out.println(s.toString());
+        }
+    }
+}
+
+class Student {
+    int age;
+    String name;
+
+    public Student(int age, String name) {
+        this.age = age;
+        this.name = name;
+    }
+
+    public String toString() {
+        return "Name = " + this.name + " : " + "Age =" + this.age;
     }
 }
