@@ -1,32 +1,26 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
 public class Temp {
-    public static void main(String [] args){
-        A obj= new A();
-        obj.show(9);
-    }
-}
+    public static void main(String[] args) {
+        List<Integer> nums = new ArrayList<>();
+        Comparator<Integer> com = new Comparator<Integer>() {
+            public int compare(Integer a, Integer b) {
+                if ((a % 10) > (b % 10)) {
+                    return 1;
+                } else {
+                    return -1;
+                }
+            }
+        };
 
-class A extends B{
-    public void show(){
-        System.out.println("In A show");
-    }
-    public void hide(){
-        System.out.println("In A hide");
-    }
-}
- class  B extends C {
-    public void show(){
-        System.out.println("In B show");
-    }
-
-    public void display(){
-        System.out.println("In B display");
-    }
-}
-class C{
-    public void show(int a){
-        System.out.println("In C show");
-    }
-    public void display(){
-        System.out.println("In C display");
+        nums.add(23);
+        nums.add(71);
+        nums.add(35);
+        nums.add(17);
+        Collections.sort(nums, com);
+        System.out.println(nums);
     }
 }
