@@ -5,10 +5,10 @@ import java.util.List;
 
 public class Temp {
     public static void main(String[] args) {
-        List<Integer> nums = new ArrayList<>();
-        Comparator<Integer> com = new Comparator<Integer>() {
-            public int compare(Integer a, Integer b) {
-                if ((a % 10) > (b % 10)) {
+        List<String> nums = new ArrayList<>();
+        Comparator<String> com = new Comparator<String>() {
+            public int compare(String a, String b) {
+                if (a.length() > b.length()) {
                     return 1;
                 } else {
                     return -1;
@@ -16,10 +16,10 @@ public class Temp {
             }
         };
 
-        nums.add(23);
-        nums.add(71);
-        nums.add(35);
-        nums.add(17);
+        nums.add("a");
+        nums.add("absd");
+        nums.add("as");
+        nums.add("skjhd");
         Collections.sort(nums, com);
         System.out.println(nums);
     }
