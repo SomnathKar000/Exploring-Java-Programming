@@ -7,15 +7,15 @@ public class Temp {
     public static void main(String[] args) {
         List<Student> students = new ArrayList<>();
 
-        Comparator<Student> com = new Comparator<Student>() {
-            public int compare(Student s1, Student s2) {
-                if (s1.age > s2.age) {
-                    return 1;
-                } else {
-                    return -1;
-                }
-            }
-        };
+        // Comparator<Student> com = new Comparator<Student>() {
+        // public int compare(Student s1, Student s2) {
+        // if (s1.age > s2.age) {
+        // return 1;
+        // } else {
+        // return -1;
+        // }
+        // }
+        // };
 
         students.add(new Student(12, "Test"));
         students.add(new Student(22, "Demo"));
@@ -23,7 +23,7 @@ public class Temp {
         students.add(new Student(26, "Done"));
         students.add(new Student(18, "Temp"));
 
-        Collections.sort(students, com);
+        Collections.sort(students);
 
         for (Student s : students) {
             System.out.println(s.toString());
@@ -31,7 +31,7 @@ public class Temp {
     }
 }
 
-class Student {
+class Student implements Comparable<Student> {
     int age;
     String name;
 
@@ -43,4 +43,13 @@ class Student {
     public String toString() {
         return "Name = " + this.name + " : " + "Age =" + this.age;
     }
+
+    public int compareTo(Student s) {
+        if (this.age > s.age) {
+            return 1;
+        } else {
+            return -1;
+        }
+    }
+
 }
