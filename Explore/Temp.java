@@ -3,9 +3,13 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import javax.management.AttributeList;
+
 public class Temp {
     public static void main(String[] args) {
+        int nums[] = { 1, 3, 4, 9 };
         List<Student> students = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
 
         // Comparator<Student> com = new Comparator<Student>() {
         // public int compare(Student s1, Student s2) {
