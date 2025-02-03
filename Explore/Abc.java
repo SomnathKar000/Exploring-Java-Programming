@@ -1,4 +1,13 @@
+import java.util.ArrayList;
 
-void main() {
-    System.out.println("Hello World");
+public class Abc {
+    public static void main(String[] args) {
+        var obj = new ArrayList<>();
+        obj.add(2);
+        obj.add("sas");
+
+        for (var num : obj) {
+            System.out.println(num);
+        }
+    }
 }
